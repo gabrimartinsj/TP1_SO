@@ -13396,7 +13396,7 @@ syscall(void)
             curproc->pid, curproc->name, num);
     curproc->tf->eax = -1;
   }
-
+  
   // Trace //
   if (curproc->traceflag >> num) {
 8010483e:	8b 43 7c             	mov    0x7c(%ebx),%eax
@@ -13439,7 +13439,7 @@ syscall(void)
     curproc->tf->eax = -1;
 8010486a:	8b 43 18             	mov    0x18(%ebx),%eax
   }
-
+  
   // Trace //
   if (curproc->traceflag >> num) {
 8010486d:	89 f1                	mov    %esi,%ecx
@@ -13452,7 +13452,7 @@ syscall(void)
 8010486f:	83 c4 10             	add    $0x10,%esp
 80104872:	c7 40 1c ff ff ff ff 	movl   $0xffffffff,0x1c(%eax)
   }
-
+  
   // Trace //
   if (curproc->traceflag >> num) {
 80104879:	8b 43 7c             	mov    0x7c(%ebx),%eax
@@ -13467,7 +13467,7 @@ syscall(void)
 80104882:	8b 43 18             	mov    0x18(%ebx),%eax
     curproc->tf->eax = -1;
   }
-
+  
   // Trace //
   if (curproc->traceflag >> num) {
 	  cprintf("%d: syscall %s -> %d\n",
@@ -13478,7 +13478,7 @@ syscall(void)
 8010488f:	8d 43 6c             	lea    0x6c(%ebx),%eax
     curproc->tf->eax = -1;
   }
-
+  
   // Trace //
   if (curproc->traceflag >> num) {
 	  cprintf("%d: syscall %s -> %d\n",
