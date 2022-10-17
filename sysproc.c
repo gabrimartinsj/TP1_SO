@@ -93,8 +93,8 @@ sys_uptime(void)
 int
 sys_trace(void)
 {
-    struct proc *curproc = myproc();
-    uint pid;
-    pid = curproc->pid;
-    return pid;
+  if (argint(0, &myproc()->traceflag) < 0)
+    return -1;
+
+  return 0;
 }
