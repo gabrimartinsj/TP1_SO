@@ -144,13 +144,13 @@ syscall(void)
             curproc->pid, curproc->name, num);
     curproc->tf->eax = -1;
   }
-  
+
   // Trace //
-  if (curproc->traceflag >> num) {
-	  cprintf("%d: syscall %s -> %d\n",
-      curproc->pid,
-      curproc->name,
-      num,
-      curproc->tf->eax = 0);
+  if (curproc->traceflag != 0) {
+	  cprintf("%d\n%s\n%d\n%d\n",
+          curproc->pid,
+          curproc->name,
+          num,
+          syscalls[num]());
   }
 }
