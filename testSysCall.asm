@@ -21,16 +21,14 @@ int main(void){
     trace(1);
   11:	6a 01                	push   $0x1
   13:	e8 1a 03 00 00       	call   332 <trace>
-
     getpid();
   18:	e8 f5 02 00 00       	call   312 <getpid>
-    getpid();
-  1d:	e8 f0 02 00 00       	call   312 <getpid>
+    wait();
+  1d:	e8 78 02 00 00       	call   29a <wait>
 
     trace(0);
   22:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
   29:	e8 04 03 00 00       	call   332 <trace>
-
     getpid();
   2e:	e8 df 02 00 00       	call   312 <getpid>
 

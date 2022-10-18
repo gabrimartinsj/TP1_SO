@@ -130,6 +130,31 @@ static int (*syscalls[])(void) = {
 [SYS_trace]   sys_trace,
 };
 
+char *syscallnames[] = {
+[SYS_fork]    "fork",
+[SYS_exit]    "exit",
+[SYS_wait]    "wait",
+[SYS_pipe]    "pipe",
+[SYS_read]    "read",
+[SYS_kill]    "kill",
+[SYS_exec]    "exec",
+[SYS_fstat]   "fstat",
+[SYS_chdir]   "chdir",
+[SYS_dup]     "dup",
+[SYS_getpid]  "getpid",
+[SYS_sbrk]    "sbrk",
+[SYS_sleep]   "sleep",
+[SYS_uptime]  "uptime",
+[SYS_open]    "open",
+[SYS_write]   "write",
+[SYS_mknod]   "mknod",
+[SYS_unlink]  "unlink",
+[SYS_link]    "link",
+[SYS_mkdir]   "mkdir",
+[SYS_close]   "close",
+[SYS_trace]   "trace",
+};
+
 void
 syscall(void)
 {
@@ -147,10 +172,10 @@ syscall(void)
 
   // Trace //
   if (curproc->traceflag != 0) {
-	  cprintf("%d\n%s\n%d\n%d\n",
+	  cprintf("%d\n%s\n%d\n%s\n",
           curproc->pid,
           curproc->name,
           num,
-          syscalls[num]());
+          syscallnames[num]);
   }
 }
