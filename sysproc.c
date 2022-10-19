@@ -98,3 +98,10 @@ sys_trace(void)
 
   return 0;
 }
+
+int
+sys_cs(void)
+{
+  cprintf(0,myproc()->context);
+  return 0;
+}
