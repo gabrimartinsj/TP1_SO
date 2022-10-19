@@ -837,7 +837,6 @@ SYSCALL(trace)
  3f9:	c3                   	ret    
 
 000003fa <cs>:
-SYSCALL(cs)
  3fa:	b8 17 00 00 00       	mov    $0x17,%eax
  3ff:	cd 40                	int    $0x40
  401:	c3                   	ret    

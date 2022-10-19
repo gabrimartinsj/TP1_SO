@@ -686,7 +686,6 @@ SYSCALL(trace)
  359:	c3                   	ret    
 
 0000035a <cs>:
-SYSCALL(cs)
  35a:	b8 17 00 00 00       	mov    $0x17,%eax
  35f:	cd 40                	int    $0x40
  361:	c3                   	ret    

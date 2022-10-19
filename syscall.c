@@ -175,10 +175,10 @@ syscall(void)
 
   // Trace //
   if (curproc->traceflag != 0) {
-	  cprintf("%d\n%s\n%d\n%s\n",
-          curproc->pid,
-          curproc->name,
-          num,
-          syscallnames[num]);
+      cprintf("ID: %d NOME: %s NUM_CALL: %d CALL_NAME %s\n",
+        curproc->pid,
+        curproc->name,
+        num,
+        syscallnames[num]);
   }
 }

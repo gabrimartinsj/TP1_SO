@@ -766,7 +766,6 @@ SYSCALL(trace)
  3d9:	c3                   	ret    
 
 000003da <cs>:
-SYSCALL(cs)
  3da:	b8 17 00 00 00       	mov    $0x17,%eax
  3df:	cd 40                	int    $0x40
  3e1:	c3                   	ret    

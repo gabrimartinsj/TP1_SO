@@ -102,6 +102,7 @@ sys_trace(void)
 int
 sys_cs(void)
 {
-  cprintf(0,myproc()->context);
-  return 0;
+  int aux;
+  aux = myproc()->counter;
+  return aux;
 }

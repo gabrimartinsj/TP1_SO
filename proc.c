@@ -345,7 +345,7 @@ scheduler(void)
       c->proc = p;
       switchuvm(p);
       p->state = RUNNING;
-
+      p->counter++;
       swtch(&(c->scheduler), p->context);
       switchkvm();
 
@@ -380,6 +380,7 @@ sched(void)
   if(readeflags()&FL_IF)
     panic("sched interruptible");
   intena = mycpu()->intena;
+  p->counter++;
   swtch(&p->context, mycpu()->scheduler);
   mycpu()->intena = intena;
 }

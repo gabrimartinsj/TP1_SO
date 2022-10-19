@@ -2615,7 +2615,6 @@ SYSCALL(trace)
      dc9:	c3                   	ret    
 
 00000dca <cs>:
-SYSCALL(cs)
      dca:	b8 17 00 00 00       	mov    $0x17,%eax
      dcf:	cd 40                	int    $0x40
      dd1:	c3                   	ret    
